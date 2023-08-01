@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">TODO App</string>
+    <string name="search"> Search your notes</string>
+    <string name="back_button">Back button</string>
+    <string name="pin_button">Pin button</string>
+    <string name="todo_name_def"> Type name here</string>
+    <string name="add_item"> Add Item</string>
+    <string name="add_item_text"> List item</string>
+    <string name="pinned">PINNED</string>
+    <string name="others">OTHER</string>
+    <string name="item_name"> Item name</string>
+    <string name="close">Delete item</string>
+    <string name="todo_name">List name</string>
+    <string name="floating_button">Add Item</string>
+    <string name="three_points">…</string>
+    <string name="extra_items">+ %1$d checked items</string>
+    <string name="result_error">Activity Result Failed</string>
+    <string name="todo_name_key">Todo Key</string>
+</resources>

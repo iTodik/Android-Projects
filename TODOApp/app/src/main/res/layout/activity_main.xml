@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.MainActivity">
+
+    <EditText
+        android:autofillHints="@string/search"
+        android:background="@drawable/rounded_rect"
+        android:id="@+id/filter_text"
+        android:inputType="text"
+        android:hint="@string/search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/search_height"
+        android:layout_marginLeft="@dimen/edge_margin"
+        android:layout_marginRight="@dimen/edge_margin"
+        android:layout_marginTop="@dimen/edge_margin"
+        android:textSize="@dimen/search_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filter_text">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:orientation="vertical"
+            android:gravity="top">
+
+            <TextView
+                android:id="@+id/pinned_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pinned"
+                android:textSize="@dimen/regular_text_size"
+                android:textColor="@color/grey"
+                android:layout_marginTop="@dimen/inner_margin"
+                android:layout_marginStart="@dimen/edge_margin"
+                android:layout_marginEnd="@dimen/edge_margin"
+                android:visibility="gone"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/pinned_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/inner_margin"
+                android:layout_marginStart="@dimen/edge_margin"
+                android:layout_marginEnd="@dimen/edge_margin"
+                app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+                app:spanCount="@integer/two"
+                />
+
+            <TextView
+                android:id="@+id/others_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/others"
+                android:textSize="@dimen/regular_text_size"
+                android:textColor="@color/grey"
+                android:layout_marginTop="@dimen/inner_margin"
+                android:layout_marginStart="@dimen/edge_margin"
+                android:layout_marginEnd="@dimen/edge_margin"
+                android:visibility="gone"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/other_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/inner_margin"
+                android:layout_marginStart="@dimen/edge_margin"
+                android:layout_marginEnd="@dimen/edge_margin"
+                app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+                app:spanCount="@integer/two"
+                />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/new_list_button"
+        android:contentDescription="@string/floating_button"
+        android:foregroundGravity="center"
+        android:backgroundTint="@color/white"
+        android:layout_width="@dimen/floating_width"
+        android:layout_height="@dimen/floating_width"
+        android:layout_marginEnd="@dimen/edge_margin"
+        android:layout_marginBottom="@dimen/edge_margin"
+        android:src="@drawable/ic_add"
+        app:fabCustomSize="@dimen/floating_width"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

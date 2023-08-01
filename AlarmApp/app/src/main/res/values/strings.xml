@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Alarm App</string>
+    <string name="shared">shared</string>
+    <string name="switch_text">Switch to %1s</string>
+    <string name="light">light</string>
+    <string name="dark">dark</string>
+    <string name="add_icon_desc">Adds new alarm</string>
+    <string name="default_time">00:00</string>
+</resources>

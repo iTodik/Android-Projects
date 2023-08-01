@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <CheckBox
+        android:id="@+id/checked"
+        android:layout_width="@dimen/icon_width"
+        android:layout_height="@dimen/icon_width"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/inner_margin"
+        android:layout_marginStart="@dimen/zero"
+        android:layout_marginEnd="@dimen/icon_text_dist"
+        android:layout_centerVertical="true"
+        android:checked="false"
+        />
+
+    <ImageView
+        android:contentDescription="@string/close"
+        android:id="@+id/close_button"
+        android:layout_width="@dimen/icon_width"
+        android:layout_height="@dimen/icon_width"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/icon_text_dist"
+        android:layout_marginTop="@dimen/inner_margin"
+        android:layout_marginEnd="@dimen/zero"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_close"
+        android:scaleType="fitEnd"
+        android:visibility="gone"
+        />
+
+    <EditText
+        android:id="@+id/item_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/inner_margin"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/checked"
+        android:layout_toStartOf="@id/close_button"
+        android:background="@null"
+        android:hint="@null"
+        android:inputType="text"
+        android:textSize="@dimen/regular_text_size"
+        android:textColor="@color/black"
+        android:autofillHints="@null"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/add_button"
+        android:alpha="0.5"
+        android:layout_width="@dimen/icon_width"
+        android:layout_height="@dimen/icon_width"
+        android:layout_marginEnd="@dimen/icon_text_dist"
+        android:src="@drawable/ic_add"
+        android:contentDescription="@string/add_item"
+        />
+
+    <TextView
+        android:alpha="0.6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_item_text"
+        android:textSize="@dimen/regular_text_size"
+        />
+
+</LinearLayout>

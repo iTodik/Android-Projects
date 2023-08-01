@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/flags"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/georgia"
+        android:layout_marginTop="@dimen/top_margin"
+        android:layout_width="@dimen/flag_city_dist"
+        android:layout_height="@dimen/flag_city_dist"
+        app:layout_constraintEnd_toStartOf="@+id/uk"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/georgia"
+        android:contentDescription="@string/georgia_flag" />
+
+    <ImageView
+        android:id="@+id/uk"
+        android:layout_marginTop="@dimen/top_margin"
+        android:layout_width="@dimen/flag_city_dist"
+        android:layout_height="@dimen/flag_city_dist"
+        app:layout_constraintBottom_toBottomOf="@+id/georgia"
+        app:layout_constraintEnd_toStartOf="@+id/jamaica"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/georgia"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/uk"
+        android:contentDescription="@string/uk_flag" />
+
+    <ImageView
+        android:id="@+id/jamaica"
+        android:layout_marginTop="@dimen/top_margin"
+        android:layout_width="@dimen/flag_city_dist"
+        android:layout_height="@dimen/flag_city_dist"
+        app:layout_constraintBottom_toBottomOf="@+id/uk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/uk"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/jamaica"
+        android:contentDescription="@string/jamaica_flag" />
+
+    <TextView
+        android:id="@+id/city"
+        android:text="@string/tbilisi"
+        android:layout_marginTop="@dimen/flag_city_dist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uk" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
